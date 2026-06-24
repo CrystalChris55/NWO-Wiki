@@ -1,0 +1,1020 @@
+/* --- Sitewide dark theme for Timeless --- */
+:root{
+  --bg:#111; --bg2:#181a1b; --panel:#1f2224; --border:#2a2e31;
+  --text:#e6e6e6; --muted:#cbd5e1;
+  --link:#93c5fd; --visited:#c4b5fd; --new:#f87171;
+}
+
+/* Page & content */
+html, body{ background:var(--bg) !important; color:var(--text) !important; }
+.mw-body, #mw-content, #mw-content-text, .mw-content-text, .mw-body-content{
+  background:var(--bg2) !important; color:var(--text) !important;
+}
+
+/* Header, sidebars, footer */
+#mw-header-container, #mw-site-navigation, #mw-related-navigation, #mw-footer-container{
+  background:var(--panel) !important; color:var(--text) !important; border-color:var(--border) !important;
+}
+#mw-panel, #mw-related, .sidebar-chunk{ background:var(--panel) !important; color:var(--text) !important; }
+
+/* Links */
+a, .mw-parser-output a{ color:var(--link) !important; }
+a:visited{ color:var(--visited) !important; }
+a.new, a.new:visited{ color:var(--new) !important; }
+
+/* Tables, boxes, TOC, infoboxes */
+table, .wikitable, th, td, .mw-parser-output .toc, .infobox, .navbox,
+.box, .messagebox, .mw-message-box{
+  background:var(--panel) !important; color:var(--text) !important; border-color:var(--border) !important;
+}
+
+/* Forms & code blocks */
+input, textarea, select, .mw-ui-input, .oo-ui-inputWidget-input,
+.mw-search-input, pre, code, .mw-code, .mw-highlight{
+  background:#0f1316 !important; color:var(--text) !important; border-color:var(--border) !important;
+}
+
+/* Buttons */
+.mw-ui-button, .oo-ui-buttonElement-button{
+  background:#2b3036 !important; color:var(--text) !important; border-color:var(--border) !important;
+}
+
+/* Misc */
+hr{ border-color:var(--border) !important; }
+
+  .skin-timeless #mw-content-container {
+    background: none !important;
+  }
+
+
+/* Visible dark-style search buttons */
+.skin-timeless #searchButton,
+.skin-timeless #mw-searchButton,         /* Special:Search */
+.skin-timeless #searchGoButton,          /* the 'Go' button if present */
+.skin-timeless #p-search input[type="submit"],
+.skin-timeless #searchform input[type="submit"],
+.skin-timeless .mw-ui-button,
+.skin-timeless .oo-ui-buttonElement.oo-ui-buttonElement-framed .oo-ui-buttonElement-button {
+  appearance: none;
+  background-color: #2b3036 !important;
+  color: #e6e6e6 !important;
+  border: 1px solid #3b4046 !important;
+  border-radius: 4px;
+  padding: 0.35em 0.7em;
+  box-shadow: none !important;
+}
+
+/* Hover / focus / active states */
+.skin-timeless #searchButton:hover,
+.skin-timeless #mw-searchButton:hover,
+.skin-timeless #searchGoButton:hover,
+.skin-timeless .mw-ui-button:hover,
+.skin-timeless .oo-ui-buttonElement-button:hover {
+  background-color: #3a4047 !important;
+  border-color: #4b5560 !important;
+}
+
+.skin-timeless #searchButton:focus,
+.skin-timeless #mw-searchButton:focus,
+.skin-timeless #searchGoButton:focus,
+.skin-timeless .mw-ui-button:focus,
+.skin-timeless .oo-ui-buttonElement-button:focus {
+  outline: 2px solid #93c5fd !important;  /* focus ring */
+  outline-offset: 2px;
+}
+
+.skin-timeless #searchButton:active,
+.skin-timeless #mw-searchButton:active,
+.skin-timeless #searchGoButton:active {
+  background-color: #32363c !important;
+}
+
+
+/* --- Timeless user dropdown (personal tools) dark theme --- */
+
+/* Base panel (Timeless personal tools portlet) */
+.skin-timeless #p-personal,
+.skin-timeless #p-personal .mw-portlet-body {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5) !important;
+}
+
+/* Trigger/header (the clickable label) */
+.skin-timeless #p-personal h3,
+.skin-timeless #p-personal .mw-portlet-header {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+}
+
+/* List + links inside the dropdown */
+.skin-timeless #p-personal .mw-portlet-body ul { margin: 0; padding: .35rem 0; list-style: none; }
+.skin-timeless #p-personal .mw-portlet-body li a {
+  display: block;
+  padding: .45rem .75rem;
+  color: var(--text) !important;
+  text-decoration: none;
+}
+.skin-timeless #p-personal .mw-portlet-body li a:hover,
+.skin-timeless #p-personal .mw-portlet-body li a:focus {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+}
+
+/* OOUI-powered dropdowns (some wikis render personal tools via OOUI) */
+.skin-timeless .oo-ui-popupWidget-popup,
+.skin-timeless .oo-ui-menuSelectWidget,
+.skin-timeless .oo-ui-menuSelectWidget > .oo-ui-menuSelectWidget-menu {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5) !important;
+}
+.skin-timeless .oo-ui-optionWidget { color: var(--text) !important; }
+.skin-timeless .oo-ui-optionWidget:hover,
+.skin-timeless .oo-ui-optionWidget.oo-ui-optionWidget-highlighted {
+  background: #2b3036 !important;
+}
+
+/* Fallback for wikis using #personal instead of #p-personal */
+.skin-timeless #personal,
+.skin-timeless #personal .menu {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+.skin-timeless #personal .menu li a { display:block; padding:.45rem .75rem; color:var(--text) !important; }
+.skin-timeless #personal .menu li a:hover { background:#2b3036 !important; }
+
+
+/* Personal (user) dropdown – remove the white frame/arrow */
+.skin-timeless #personal-inner.dropdown {
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;     /* some builds draw a white ring via shadow */
+  filter: none !important;
+}
+
+/* Kill the white triangle/backplate if it is drawn with a pseudo-element */
+.skin-timeless #personal-inner.dropdown::before,
+.skin-timeless #personal-inner.dropdown::after {
+  content: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Keep the actual menu panel styled dark */
+.skin-timeless #personal-inner.dropdown .menu,
+.skin-timeless #personal .menu,
+.skin-timeless #p-personal .mw-portlet-body {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45) !important;
+}
+
+
+
+/* ===== Special:CreateAccount dark fix (Timeless) ===== */
+
+/* Page container on CreateAccount */
+.skin-timeless.mw-special-CreateAccount #mw-content-container {
+  background: var(--bg2) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+/* Panels / messages / fieldsets rendered by OOUI/HTMLForm */
+.skin-timeless.mw-special-CreateAccount .mw-htmlform,
+.skin-timeless.mw-special-CreateAccount .mw-htmlform-ooui .oo-ui-panelLayout,
+.skin-timeless.mw-special-CreateAccount .oo-ui-panelLayout-framed,
+.skin-timeless.mw-special-CreateAccount .oo-ui-fieldsetLayout,
+.skin-timeless.mw-special-CreateAccount .oo-ui-messageWidget,
+.skin-timeless.mw-special-CreateAccount .mw-message-box {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+/* Inputs */
+.skin-timeless.mw-special-CreateAccount input,
+.skin-timeless.mw-special-CreateAccount textarea,
+.skin-timeless.mw-special-CreateAccount select,
+.skin-timeless.mw-special-CreateAccount .oo-ui-inputWidget-input {
+  background: #0f1316 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+.skin-timeless.mw-special-CreateAccount .oo-ui-inputWidget-input::placeholder {
+  color: #9aa1a9 !important;
+}
+
+/* Buttons */
+.skin-timeless.mw-special-CreateAccount .oo-ui-buttonElement .oo-ui-buttonElement-button,
+.skin-timeless.mw-special-CreateAccount .mw-htmlform input[type="submit"],
+.skin-timeless.mw-special-CreateAccount a.mw-ui-button {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border: 1px solid #3b4046 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+.skin-timeless.mw-special-CreateAccount .oo-ui-buttonElement .oo-ui-buttonElement-button:hover,
+.skin-timeless.mw-special-CreateAccount .mw-htmlform input[type="submit"]:hover {
+  background: #3a4047 !important;
+  border-color: #4b5560 !important;
+}
+
+/* Captcha blocks */
+.skin-timeless.mw-special-CreateAccount #mw-createaccount-captcha,
+.skin-timeless.mw-special-CreateAccount .fancycaptcha,
+.skin-timeless.mw-special-CreateAccount .mw-captcha {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Keep disabled controls visible but dim */
+.skin-timeless.mw-special-CreateAccount .oo-ui-widget-disabled .oo-ui-buttonElement-button,
+.skin-timeless.mw-special-CreateAccount .mw-htmlform .mw-ui-button[disabled] {
+  background: #2b3036 !important;
+  color: #9aa1a9 !important;
+  border-color: #3b4046 !important;
+  opacity: .7 !important;
+}
+
+/* Edit Page Modifiers */
+
+/* Toolbar + jQuery UI chrome */
+.skin-timeless .wikiEditor-ui,
+.skin-timeless .wikiEditor-ui-toolbar,
+.skin-timeless .wikiEditor-ui .ui-widget,
+.skin-timeless .wikiEditor-ui .ui-widget-content,
+.skin-timeless .wikiEditor-ui .ui-widget-header {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  box-shadow: none !important;
+}
+
+/* Toolbar tabs/groups/buttons */
+.skin-timeless .wikiEditor-ui-toolbar .tabs span.tab a,
+.skin-timeless .wikiEditor-ui-toolbar .section,
+.skin-timeless .wikiEditor-ui-toolbar .group,
+.skin-timeless .wikiEditor-ui-toolbar .tool .label {
+  color: var(--text) !important;
+}
+.skin-timeless .wikiEditor-ui-toolbar .tabs span.tab a:hover,
+.skin-timeless .wikiEditor-ui-toolbar .tool:hover {
+  background: #2b3036 !important;
+  border-color: #3b4046 !important;
+}
+
+/* Icon visibility on dark backgrounds (optional) */
+.skin-timeless .wikiEditor-ui-toolbar .tool .icon,
+.skin-timeless .wikiEditor-ui-toolbar .tabs .tab a .icon {
+  filter: invert(85%) hue-rotate(180deg); /* makes dark icons light */
+}
+
+/* Edit textbox + summary */
+.skin-timeless #wpTextbox1,
+.skin-timeless #wpSummary {
+  background: #0f1316 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Footer: minor edit / watch / buttons area */
+.skin-timeless .editOptions {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-top: 1px solid var(--border) !important;
+}
+.skin-timeless .editOptions input[type="text"],
+.skin-timeless .editOptions textarea,
+.skin-timeless .editOptions select {
+  background: #0f1316 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+.skin-timeless .editOptions input[type="checkbox"] {
+  accent-color: #93c5fd; /* visible on dark; supported by modern browsers */
+}
+
+/* Footer buttons */
+.skin-timeless .editOptions .mw-editButtons .mw-ui-button,
+.skin-timeless .editOptions .mw-editButtons input[type="submit"] {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border: 1px solid #3b4046 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+.skin-timeless .editOptions .mw-editButtons .mw-ui-button:hover,
+.skin-timeless .editOptions .mw-editButtons input[type="submit"]:hover {
+  background: #3a4047 !important;
+  border-color: #4b5560 !important;
+}
+
+/* ==== TOC (Table of contents) ==== */
+.skin-timeless .mw-parser-output .toc,
+.skin-timeless #toc,
+.skin-timeless .toc {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
+}
+
+/* TOC title line + toggle link */
+.skin-timeless .toc .toctitle,
+.skin-timeless #toctitle,
+.skin-timeless .toc .toctitle h2,
+.skin-timeless #toctitle h2,
+.skin-timeless .toc .toctogglelink,
+.skin-timeless .toctogglelabel {
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* TOC links */
+.skin-timeless .toc a { color: var(--link) !important; }
+.skin-timeless .toc a:visited { color: var(--visited) !important; }
+
+/* numbers/text inside TOC rows */
+.skin-timeless .toc .tocnumber,
+.skin-timeless .toc .toctext { color: var(--text) !important; }
+
+/* Legend boxes on Special pages (e.g., RecentChanges, SpecialPages) */
+.skin-timeless .mw-changeslist-legend,
+.skin-timeless .mw-specialpages-notes {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  box-shadow: none !important;
+}
+
+/* Headings/labels inside the legend */
+.skin-timeless .mw-changeslist-legend h2,
+.skin-timeless .mw-changeslist-legend h3,
+.skin-timeless .mw-changeslist-legend b,
+.skin-timeless .mw-changeslist-legend strong,
+.skin-timeless .mw-specialpages-notes h2,
+.skin-timeless .mw-specialpages-notes h3,
+.skin-timeless .mw-specialpages-notes b,
+.skin-timeless .mw-specialpages-notes strong {
+  color: var(--text) !important;
+}
+
+/* Links + list items */
+.skin-timeless .mw-changeslist-legend a,
+.skin-timeless .mw-specialpages-notes a { color: var(--link) !important; }
+.skin-timeless .mw-changeslist-legend a:visited,
+.skin-timeless .mw-specialpages-notes a:visited { color: var(--visited) !important; }
+
+.skin-timeless .mw-changeslist-legend ul,
+.skin-timeless .mw-specialpages-notes ul { margin: .4rem 1rem; }
+
+.skin-timeless .mw-changeslist-legend li,
+.skin-timeless .mw-specialpages-notes li { color: var(--text) !important; }
+
+/* ===== Recent changes / Watchlist filters (RCFilters, OOUI) ===== */
+
+/* Top filter panel + sections */
+.skin-timeless .mw-rcfilters-ui,
+.skin-timeless .mw-rcfilters-ui-topSection,
+.skin-timeless .mw-rcfilters-ui-controls,
+.skin-timeless .mw-rcfilters-ui-watchlistTopSection,
+.skin-timeless .mw-rcfilters-ui-changesWrapper .oo-ui-panelLayout,
+.skin-timeless .mw-rcfilters-ui-controls .oo-ui-panelLayout-framed {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+/* “Active filters” tray + token area */
+.skin-timeless .mw-rcfilters-ui-filterTagMultiselectWidget,
+.skin-timeless .oo-ui-tagMultiselectWidget,
+.skin-timeless .oo-ui-tagMultiselectWidget-handle {
+  background: var(--panel) !important;
+  border-color: var(--border) !important;
+}
+.skin-timeless .oo-ui-tagItemWidget {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border: 1px solid #3b4046 !important;
+}
+.skin-timeless .oo-ui-tagItemWidget:hover { background: #3a4047 !important; }
+.skin-timeless .oo-ui-tagItemWidget .oo-ui-labelElement-label { color: var(--text) !important; }
+
+/* Search input in the filter bar */
+.skin-timeless .mw-rcfilters-ui-controls .oo-ui-textInputWidget .oo-ui-inputWidget-input {
+  background: #0f1316 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Buttons (Saved filters, Hide, Namespaces, Tags, Live updates, etc.) */
+.skin-timeless .mw-rcfilters-ui .oo-ui-buttonElement .oo-ui-buttonElement-button {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border: 1px solid #3b4046 !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
+.skin-timeless .mw-rcfilters-ui .oo-ui-buttonElement .oo-ui-buttonElement-button:hover {
+  background: #3a4047 !important;
+  border-color: #4b5560 !important;
+}
+
+/* Menus, popups, and their options */
+.skin-timeless .oo-ui-popupWidget-popup,
+.skin-timeless .oo-ui-menuSelectWidget,
+.skin-timeless .oo-ui-menuSelectWidget > .oo-ui-menuSelectWidget-menu {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45) !important;
+}
+.skin-timeless .oo-ui-optionWidget { color: var(--text) !important; }
+.skin-timeless .oo-ui-optionWidget:hover,
+.skin-timeless .oo-ui-optionWidget.oo-ui-optionWidget-highlighted {
+  background: #2b3036 !important;
+}
+
+/* Small icon buttons inside the panel (e.g., X/remove, chevrons) */
+.skin-timeless .oo-ui-iconElement-icon {
+  filter: invert(85%) hue-rotate(180deg); /* make dark icons visible on dark bg */
+}
+
+/* The thin dark header bar under the filter tray (where Namespaces/Tags sit) */
+.skin-timeless .mw-rcfilters-ui-filterMenuHeaderWidget,
+.skin-timeless .mw-rcfilters-ui-filterMenuHeaderWidget .oo-ui-toolbar-bar,
+.skin-timeless .mw-rcfilters-ui-filterMenuHeaderWidget .oo-ui-toolbar-tools {
+  background: #1f2224 !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* Abbreviations/legend box on RC page (right sidebar) */
+.skin-timeless .mw-changeslist-legend,
+.skin-timeless .mw-specialpages-notes {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* ===== File page nav bar (ul#filetoc) ===== */
+.skin-timeless #filetoc {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: .5rem .75rem !important;
+  margin: .5rem 0 1rem !important;
+  list-style: none !important;
+  display: flex !important;
+  gap: 1rem;
+  justify-content: center;        /* center the tabs; remove if you prefer left */
+  box-shadow: none !important;
+}
+
+/* individual items */
+.skin-timeless #filetoc > li { margin: 0; padding: 0; }
+
+/* links */
+.skin-timeless #filetoc a {
+  color: var(--link) !important;
+  text-decoration: none;
+  padding: .25rem .6rem;
+  border-radius: 6px;
+}
+.skin-timeless #filetoc a:visited { color: var(--visited) !important; }
+.skin-timeless #filetoc a:hover,
+.skin-timeless #filetoc a:focus {
+  background: #2b3036 !important;
+  border: 1px solid #3b4046 !important;
+  outline: none !important;
+}
+
+/* current/selected tab (often rendered as mw-selflink) */
+.skin-timeless #filetoc .mw-selflink,
+.skin-timeless #filetoc li.selected > a,
+.skin-timeless #filetoc li a[aria-current="page"] {
+  color: var(--text) !important;
+  background: #2b3036 !important;
+  border: 1px solid #3b4046 !important;
+  border-radius: 6px !important;
+  cursor: default;
+}
+
+/* Fix spacing for OOUI buttons that include an icon */
+.skin-timeless .oo-ui-buttonElement.oo-ui-iconElement .oo-ui-buttonElement-button {
+  /* room for the icon (≈ 1.2em) + left gutter */
+  padding-left: 2.4em !important;   /* tweak to taste: 2.1–2.6em */
+}
+
+/* If the button also has a right-side indicator (chevron, etc.) */
+.skin-timeless .oo-ui-buttonElement.oo-ui-indicatorElement .oo-ui-buttonElement-button {
+  padding-right: 1.8em !important;
+}
+
+/* When it has both an icon and an indicator */
+.skin-timeless .oo-ui-buttonElement.oo-ui-iconElement.oo-ui-indicatorElement .oo-ui-buttonElement-button {
+  padding-left: 2.4em !important;
+  padding-right: 1.8em !important;
+}
+
+/* Keep the icon aligned and not sitting on top of the label */
+.skin-timeless .oo-ui-buttonElement .oo-ui-iconElement-icon {
+  left: .55em !important;                 /* nudge off the edge */
+  top: 50% !important;
+  transform: translateY(-50%) !important; /* vertical center */
+  width: 1.2em; height: 1.2em;            /* reasonable size */
+  background-color: transparent !important;
+}
+
+/* === Gallery captions: full-width overlay (triggered by IMAGE/TILE hover) === */
+
+/* Tile & image are the clip/positioning context */
+.skin-timeless .gallerybox,
+.skin-timeless .gallerybox .thumb {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 10px; /* match your thumbnails */
+}
+
+/* Make sure the image sits below the overlay */
+.skin-timeless .gallerybox .thumb { z-index: 1; }
+.skin-timeless .gallerybox .thumb a { display:block; } /* consistent hit area */
+
+/* The overlay is the WRAPPER, not just .gallerytext */
+.skin-timeless .gallerybox .gallerytextwrapper {
+  position: absolute !important;
+  left: 0; right: 0; bottom: 0;
+  margin: 0 !important;
+  padding: .6rem .8rem !important;
+  background: rgba(31,34,36,.92) !important;
+  color: var(--text) !important;
+  border: 0 !important;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  z-index: 2;
+
+  /* fully hidden off-canvas until hover */
+  transform: translateY(100%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform .18s ease, opacity .18s ease;
+  box-shadow: none !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  max-height: 100% !important;   /* allow the caption to grow; will scroll if tall */
+  overflow: auto !important;
+}
+
+/* Ensure inner text spans full width and inherits colors */
+.skin-timeless .gallerybox .gallerytextwrapper .gallerytext {
+  display: block !important;
+  margin: 0 !important;
+  color: inherit !important;
+}
+
+/* Reveal when hovering the IMAGE or anywhere on the tile */
+.skin-timeless .gallerybox:hover .gallerytextwrapper,
+.skin-timeless .gallerybox .thumb:hover ~ .gallerytextwrapper,
+.skin-timeless .gallerybox .thumb:focus-within ~ .gallerytextwrapper {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Link colors inside overlay */
+.skin-timeless .gallerybox .gallerytextwrapper a { color: var(--link) !important; }
+.skin-timeless .gallerybox .gallerytextwrapper a:visited { color: var(--visited) !important; }
+
+/* Remove any white mats under the image */
+.skin-timeless .gallerybox .thumb,
+.skin-timeless .gallerybox .thumb div {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Some skins add gradient clamps—disable */
+.skin-timeless .gallerybox .gallerytextwrapper::before { display: none !important; }
+
+
+/* === Dark theme for tab sets (tabs tabs-tabbox / tabs-label) === */
+.skin-timeless .tabs.tabs-tabbox{
+  --tab-bg: #2b3036;
+  --tab-bg-active: #181a1b;
+  --tab-border: #3b4046;
+  --tab-hover: #3a4047;
+
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px;
+  padding: .4rem .45rem .55rem;
+}
+
+/* header row (works even if the lib doesn't have an explicit head element) */
+.skin-timeless .tabs.tabs-tabbox,
+.skin-timeless .tabs.tabs-tabbox .tabs-head,
+.skin-timeless .tabs.tabs-tabbox .tabs-list{
+  display: block;
+}
+.skin-timeless .tabs.tabs-tabbox .tabs-head,
+.skin-timeless .tabs.tabs-tabbox .tabs-list{
+  margin: 0 0 .4rem 0;
+  padding: 0 0 .35rem 0;
+  border-bottom: 1px solid var(--tab-border);
+  overflow-x: auto;          /* long labels scroll instead of wrapping */
+  white-space: nowrap;
+}
+
+/* individual tab labels (handles label, link, or button implementations) */
+.skin-timeless .tabs .tabs-label,
+.skin-timeless .tabs [role="tab"],
+.skin-timeless .tabs .tabs-label a{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .7rem;
+  margin-right: .35rem;
+  font-weight: 600;
+  color: var(--text) !important;
+  background: var(--tab-bg) !important;
+  border: 1px solid var(--tab-border) !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+/* hover/focus */
+.skin-timeless .tabs .tabs-label:hover,
+.skin-timeless .tabs [role="tab"]:hover,
+.skin-timeless .tabs .tabs-label:focus-visible,
+.skin-timeless .tabs [role="tab"]:focus-visible{
+  background: var(--tab-hover) !important;
+  border-color: #4b5560 !important;
+  outline: 2px solid #93c5fd !important;  /* accessible focus ring */
+  outline-offset: 2px;
+}
+
+/* active tab (covers a bunch of common implementations) */
+.skin-timeless .tabs .tabs-label.is-active,
+.skin-timeless .tabs .tabs-label[aria-selected="true"],
+.skin-timeless .tabs [role="tab"][aria-selected="true"],
+.skin-timeless .tabs input:checked + .tabs-label{
+  background: var(--tab-bg-active) !important;
+  border-color: var(--tab-border) !important;
+  box-shadow: inset 0 -2px 0 0 var(--link);   /* subtle accent underline */
+}
+
+/* content panel */
+.skin-timeless .tabs .tabs-content,
+.skin-timeless .tabs .tabs-panel,
+.skin-timeless .tabs .tab-content,
+.skin-timeless .tabs .tabs-pane{
+  background: var(--bg2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px;
+  padding: .8rem .9rem;
+  margin-top: .55rem;
+}
+
+/* links inside panels */
+.skin-timeless .tabs .tabs-content a,
+.skin-timeless .tabs .tabs-panel a,
+.skin-timeless .tabs .tab-content a{
+  color: var(--link) !important;
+}
+.skin-timeless .tabs .tabs-content a:visited,
+.skin-timeless .tabs .tabs-panel a:visited,
+.skin-timeless .tabs .tab-content a:visited{
+  color: var(--visited) !important;
+}
+
+/* disabled tabs (if your component uses aria-disabled or a class) */
+.skin-timeless .tabs .tabs-label[aria-disabled="true"],
+.skin-timeless .tabs [role="tab"][aria-disabled="true"],
+.skin-timeless .tabs .tabs-label.is-disabled{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+/* ImageMap grid template */
+
+
+.skin-timeless .im-legend{
+  position: relative;              
+  margin-top: .6rem;
+  padding: 2.2rem 1.0rem 1.0rem;     
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+.skin-timeless .im-legend .mw-collapsible-toggle,
+.skin-timeless .im-legend .im-toggle{
+  position: absolute;
+  top: .35rem;
+  right: .6rem;
+  margin: 0 !important;
+  float: none !important;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+.skin-timeless .im-legend .mw-collapsible-toggle a,
+.skin-timeless .im-legend .mw-collapsible-toggle .mw-collapsible-text{
+  color: var(--link);
+  text-decoration: none;
+}
+
+.skin-timeless .im-legend .mw-collapsible-toggle a:visited{
+  color: var(--visited);
+}
+
+.skin-timeless .im-legend .im-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* exactly 3 */
+  gap: .35rem .6rem;
+  align-items: start;
+}
+
+.skin-timeless .im-legend .im-row{
+  display: grid;
+  grid-template-columns: 2.6em 1fr;   /* number | label */
+  gap: .4rem;
+  padding: .45rem .55rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+}
+.skin-timeless .im-legend .im-row:hover,
+.skin-timeless .im-legend .im-row.liHighlighting{
+  background: #3a4047;
+  border-color: #4b5560;
+}
+.skin-timeless .im-legend .im-num{ text-align:right; color: var(--muted); }
+.skin-timeless .im-legend .im-label a{ color: var(--link); text-decoration: none; }
+.skin-timeless .im-legend .im-label a:visited{ color: var(--visited); }
+.skin-timeless .im-legend .toctitle{ position: sticky; top:0; background:inherit; }
+
+
+
+
+
+
+
+
+
+/* --- Sort arrows for wikitable --- */
+
+/* Make room for the arrows */
+.skin-timeless table.wikitable.sortable thead th {
+  position: relative;
+  padding-right: 1.5rem; /* space for arrows on the right */
+}
+
+
+.skin-timeless table.wikitable.sortable thead th::before,
+.skin-timeless table.wikitable.sortable thead th::after {
+  content: "";
+  position: absolute;
+  right: .45rem;
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  opacity: .35;                 /* faint by default */
+}
+
+/* Up triangle */
+.skin-timeless table.wikitable.sortable thead th::before {
+  border-bottom: 7px solid #fff;      /* white */
+  top: calc(50% - 8px);               /* a bit above the middle */
+}
+
+/* Down triangle */
+.skin-timeless table.wikitable.sortable thead th::after {
+  border-top: 7px solid #fff;         /* white */
+  top: calc(50% + 2px);               /* a bit below the middle */
+}
+
+/* ASCENDING: brighten the UP arrow and dim the DOWN arrow */
+.skin-timeless table.wikitable.sortable thead th[aria-sort="ascending"]::before,
+.skin-timeless table.wikitable.sortable thead th.headerSortUp::before,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerAsc::before { opacity: .95; }
+
+.skin-timeless table.wikitable.sortable thead th[aria-sort="ascending"]::after,
+.skin-timeless table.wikitable.sortable thead th.headerSortUp::after,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerAsc::after { opacity: .15; }
+
+/* DESCENDING: brighten the DOWN arrow and dim the UP arrow */
+.skin-timeless table.wikitable.sortable thead th[aria-sort="descending"]::after,
+.skin-timeless table.wikitable.sortable thead th.headerSortDown::after,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerDesc::after { opacity: .95; }
+
+.skin-timeless table.wikitable.sortable thead th[aria-sort="descending"]::before,
+.skin-timeless table.wikitable.sortable thead th.headerSortDown::before,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerDesc::before { opacity: .15; }
+
+/* Optional: nudge visibility on hover when unsorted */
+.skin-timeless table.wikitable.sortable thead th:hover::before,
+.skin-timeless table.wikitable.sortable thead th:hover::after { opacity: .55; }
+
+.skin-timeless table.wikitable.sortable thead th[aria-sort],
+.skin-timeless table.wikitable.sortable thead th.headerSortUp,
+.skin-timeless table.wikitable.sortable thead th.headerSortDown,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerAsc,
+.skin-timeless table.wikitable.sortable thead th.tablesorter-headerDesc {
+  background: rgba(255,255,255,.04);
+  outline: 1px solid var(--border);
+}
+
+
+
+
+.mw-halign-right img,
+.mw-halign-left img,
+.mw-halign-center img {
+  border: 1px solid var(--theme-border-color, #444); 
+  background: var(--theme-bg-secondary, #1a1a1a);    
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);     
+}
+
+/* Optional: container adjustments */
+.mw-halign-right,
+.mw-halign-left {
+  margin: 0.5em;
+  background: transparent !important;
+}
+
+/* --- IMAGE FRAME + BACKGROUND --- */
+figure,
+.thumb,
+.thumbinner,
+.mw-halign-right,
+.mw-halign-left,
+.mw-halign-center {
+    background: transparent !important;
+}
+
+figure img,
+.thumbinner img {
+    border: 1px solid var(--theme-border, #444);
+    background: var(--theme-surface, #111); /* The image frame background */
+    border-radius: 4px;
+    padding: 4px;
+}
+
+
+figure figcaption,
+.thumbcaption,
+.mw-valign-top figcaption,
+.mw-valign-bottom figcaption {
+    background: var(--theme-surface-alt, #1a1a1a) !important;  
+    color: var(--theme-text-secondary, #cccccc) !important;     
+    border: 1px solid var(--theme-border, #444) !important;
+    border-top: none !important;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Optional: Remove hover brightening entirely */
+figure figcaption:hover,
+.thumbcaption:hover {
+    background: var(--theme-surface-alt, #1a1a1a) !important;
+}
+
+
+
+
+/* ---------- Special:Preferences — darken tabs + save bar ---------- */
+.skin-timeless.page-Special_Preferences .oo-ui-tabSelectWidget,
+.skin-timeless.page-Special_Preferences .oo-ui-tabSelectWidget-framed {
+  background: var(--panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px;
+  background-image: none !important; /* kill any white gradient */
+}
+
+/* Each tab "pill" */
+.skin-timeless.page-Special_Preferences .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  box-shadow: none !important;
+}
+
+/* Hover / focus / pressed */
+.skin-timeless.page-Special_Preferences .oo-ui-tabOptionWidget.oo-ui-optionWidget-highlighted,
+.skin-timeless.page-Special_Preferences .oo-ui-tabOptionWidget.oo-ui-optionWidget-pressed {
+  background: #2b3036 !important;
+  border-color: #4b5560 !important;
+  color: var(--text) !important;
+}
+.skin-timeless.page-Special_Preferences .oo-ui-tabOptionWidget:focus-within {
+  outline: 2px solid var(--link) !important;
+  outline-offset: 2px;
+}
+
+/* Selected (active) tab — subtle accent underline */
+.skin-timeless.page-Special_Preferences .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border-color: #4b5560 !important;
+  box-shadow: inset 0 -2px 0 var(--link) !important; /* “active” indicator */
+}
+
+/* Ensure the tab labels themselves inherit dark text */
+.skin-timeless.page-Special_Preferences .oo-ui-tabOptionWidget .oo-ui-labelElement-label {
+  color: var(--text) !important;
+}
+
+
+
+
+/* ---------- Submit button bar ---------- */
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons {
+  background: var(--panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  padding: .6rem .8rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+
+/* Buttons in the bar (OOUI + mw-ui fallback) */
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons .oo-ui-buttonElement-button,
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons .mw-ui-button {
+  background: #2b3036 !important;
+  color: var(--text) !important;
+  border: 1px solid #3b4046 !important;
+  box-shadow: none !important;
+  border-radius: 8px;
+}
+
+/* Progressive (primary) action color, but still dark-friendly */
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons
+  .oo-ui-buttonElement.oo-ui-flaggedElement-progressive .oo-ui-buttonElement-button {
+  background: #3b82f6 !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+}
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons
+  .oo-ui-buttonElement.oo-ui-flaggedElement-progressive .oo-ui-buttonElement-button:hover {
+  background: #2563eb !important;
+}
+
+/* Hover/focus for normal buttons */
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons .oo-ui-buttonElement-button:hover,
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons .mw-ui-button:hover {
+  background: #3a4047 !important;
+  border-color: #4b5560 !important;
+}
+.skin-timeless.page-Special_Preferences .mw-htmlform-submit-buttons .oo-ui-buttonElement-button:focus {
+  outline: 2px solid var(--link) !important;
+  outline-offset: 2px;
+}
+
+
+
+/* Imagemap Wrapper fix */
+.floatleft .im-wrap { float: left; }
+.floatright .im-wrap { float: right; }
+
+
+.floatleft .im-legend,
+.floatright .im-legend { clear: both; margin-top: .5rem; }
+
+.imageMapHighlighter img { display: block; }
